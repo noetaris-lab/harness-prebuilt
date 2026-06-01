@@ -1,0 +1,44 @@
+{
+  "name": "@noetaris/harness-prebuilt",
+  "version": "0.1.0",
+  "description": "Prebuilt harness agents for the Noetaris ecosystem",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "noetaris",
+    "harness",
+    "agents"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@noetaris/harness": "^0.3.1"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noetaris-lab/harness-prebuilt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/noetaris-lab/harness-prebuilt/issues"
+  },
+  "homepage": "https://github.com/noetaris-lab/harness-prebuilt#readme"
+}
